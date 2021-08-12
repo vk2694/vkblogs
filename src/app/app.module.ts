@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Blog1Component } from './blog1/blog1.component';
+import { HomeComponent } from './home/home.component';
+
+const router: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'blog1', component: Blog1Component }
+];
 
 @NgModule({
   declarations: [
@@ -10,7 +18,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(router)
   ],
   providers: [],
   bootstrap: [AppComponent]
