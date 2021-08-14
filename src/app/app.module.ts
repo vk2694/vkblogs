@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 
 const router: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'blog1', component: Blog1Component }
+  { path: 'blogone', component: Blog1Component }
 ];
 
 @NgModule({
@@ -21,7 +21,7 @@ const router: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(router)
   ],
-  providers: [],
+  providers: [RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
