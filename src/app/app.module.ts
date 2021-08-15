@@ -7,21 +7,19 @@ import { AppComponent } from './app.component';
 import { Blog1Component } from './blog1/blog1.component';
 import { HomeComponent } from './home/home.component';
 
-const router: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'blogone', component: Blog1Component }
-];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Blog1Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(router)
   ],
-  providers: [RouterModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
